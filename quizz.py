@@ -28,6 +28,12 @@ def quiz_game():
             "options": ["A. O2", "B. H2O", "C. CO2", "D. H2"],
             "answer": "B"
         }
+
+        {
+            "question": "Who was Molière ?",
+            "options": ["A. a super-hero", "B. a singer", "C. a painter", "D. a dramaturge"],
+            "answer": "D"
+        }
     ]
 
     score = 0  # Player's score
