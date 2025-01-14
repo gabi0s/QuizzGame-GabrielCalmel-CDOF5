@@ -27,16 +27,16 @@ def quiz_game():
             "question": "What is the chemical symbol for water?",
             "options": ["A. O2", "B. H2O", "C. CO2", "D. H2"],
             "answer": "B"
-        }
-
+        },
         {
-            "question": "Who was Molière ?",
+            "question": "Who was Molière?",
             "options": ["A. a super-hero", "B. a singer", "C. a painter", "D. a dramaturge"],
             "answer": "D"
         }
     ]
 
     score = 0  # Player's score
+    total_questions = len(questions)  # Total number of questions
 
     # Iterate through questions
     for i, q in enumerate(questions, 1):
@@ -54,8 +54,12 @@ def quiz_game():
         else:
             print(f"Wrong! The correct answer was {q['answer']}.\n")
 
+    # Calculate the average score (based on total questions)
+    average_score = (score / total_questions) * 100
+
     # Final score
-    print(f"Game Over! Your final score is {score}/{len(questions)}.")
+    print(f"Game Over! Your final score is {score}/{total_questions}.")
+    print(f"Your average score is: {average_score:.2f}%")
 
 # Run the quiz game
 if __name__ == "__main__":
